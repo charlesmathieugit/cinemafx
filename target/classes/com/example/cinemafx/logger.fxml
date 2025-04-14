@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Pos?>
+
+<TabPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.cinemafx.CinemaController">
+    <!-- Onglet Clients -->
+    <Tab text="Clients">
+        <VBox>
+            <Label text="Liste des clients" style="-fx-font-size: 18px;"/>
+            <ListView fx:id="clientList" prefHeight="200"/>
+            <Button text="Ajouter un client" fx:id="add_client"/>
+            <Button text="Supprimer un client" fx:id="remove_selected_client"/>
+        </VBox>
+    </Tab>
+
+    <!-- Onglet Séances -->
+    <Tab text="Séances">
+        <VBox>
+            <Label text="Liste des séances" style="-fx-font-size: 18px;"/>
+            <ListView fx:id="seanceList" prefHeight="200"/>
+            <Button text="Ajouter une séance" fx:id="add_seance"/>
+            <Button text="Supprimer une séance" fx:id="remove_selected_seance"/>
+        </VBox>
+    </Tab>
+</TabPane>

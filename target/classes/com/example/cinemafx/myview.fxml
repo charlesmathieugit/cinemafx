@@ -67,17 +67,13 @@
                                         <TextField fx:id="salle" layoutX="316.0" layoutY="193.0" prefHeight="26.0" prefWidth="266.0" />
                                         <Label layoutX="107.0" layoutY="266.0" text="Nombre de places" />
                                         <TextField fx:id="places" layoutX="316.0" layoutY="262.0" prefHeight="26.0" prefWidth="266.0" />
-                                        <Button fx:id="add_seance" layoutX="141.0" layoutY="455.0" mnemonicParsing="false" onAction="#add_seance" prefHeight="26.0" prefWidth="341.0" text="Ajouter une seance" />
-                              <Button fx:id="delete_seance" layoutX="141.0" layoutY="513.0" mnemonicParsing="false" onAction="#delete_seance" prefHeight="26.0" prefWidth="341.0" text="Supprimer une seance" />
+                                        <Button fx:id="add_seance" layoutX="145.0" layoutY="381.0" mnemonicParsing="false" onAction="#add_seance" prefHeight="26.0" prefWidth="341.0" text="Ajouter une seance" />
+                              <Button fx:id="delete_seance" layoutX="145.0" layoutY="459.0" mnemonicParsing="false" onAction="#delete_seance" prefHeight="26.0" prefWidth="341.0" text="Supprimer une seance" />
                               <Label layoutX="141.0" layoutY="43.0" prefHeight="38.0" prefWidth="230.0" text="Gestion de séance">
                                  <font>
                                     <Font size="26.0" />
                                  </font>
                               </Label>
-                              <TextField fx:id="date" layoutX="316.0" layoutY="318.0" prefHeight="26.0" prefWidth="266.0" />
-                              <TextField fx:id="horaire" layoutX="316.0" layoutY="383.0" prefHeight="26.0" prefWidth="266.0" />
-                              <Label layoutX="170.0" layoutY="387.0" text="Horaire" />
-                              <Label layoutX="179.0" layoutY="322.0" text="Date" />
                                     </children>
                                 </AnchorPane>
                             </items>
