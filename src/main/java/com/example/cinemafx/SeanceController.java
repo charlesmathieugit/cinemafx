@@ -32,6 +32,12 @@ public class SeanceController {
     private TextField salle;
 
     @FXML
+    private TextField horaire;
+
+    @FXML
+    private TextField date;
+
+    @FXML
     private ListView<Seance> seances_list;
 
 
@@ -50,6 +56,8 @@ public class SeanceController {
         String film = this.film.getText();
         String places = this.places.getText();
         String salle = this.salle.getText();
+        String date = this.date.getText();
+        String horaires = this.horaire.getText();
 
         if (film.isEmpty() || places.isEmpty() || salle.isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -59,7 +67,7 @@ public class SeanceController {
             alert.showAndWait();
         } else {
             SeanceManager cm = new SeanceManager();
-            cm.addSeance(film, places, salle);
+            cm.addSeance(film, places, salle, date, horaires);
             this.loadSeances();
         }
 

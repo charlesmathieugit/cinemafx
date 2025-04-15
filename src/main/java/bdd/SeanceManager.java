@@ -4,15 +4,17 @@ import java.sql.*;
 
 public class SeanceManager {
 
-    public void addSeance( String film, String salle, String places) {
+    public void addSeance( String film, String salle, String places, String horaires, String date) {
         BDDManager bddManager = new BDDManager();
         Connection Connection = bddManager.connection();
-        String sql_request = "INSERT INTO seances (film, salle, places) VALUES (?, ?, ?)";
+        String sql_request = "INSERT INTO seances (film, salle, places, horaires, date) VALUES (?, ?, ?, ?, ?)";
         try {
             PreparedStatement pstmt = Connection.prepareStatement(sql_request);
             pstmt.setString(1, film);
             pstmt.setString(2, salle);
             pstmt.setString(3, places);
+            pstmt.setString(4, horaires);
+            pstmt.setString(5, date);
 
             pstmt.execute();
         } catch (SQLException e) {

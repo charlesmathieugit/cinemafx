@@ -7,6 +7,10 @@ public class Seance {
 
     private String places;
 
+    private String date;
+
+    private String horaire;
+
     private int id;
 
 
@@ -25,12 +29,16 @@ public class Seance {
         return salle;
     }
 
-    @Override
-    public String toString() {
-        return this.film + " - " + this.salle;
-    }
+        @Override
+        public String toString() {
+            return "Film : " + film +
+                    " | Salle : " + salle +
+                    " | Places : " + places +
+                    " | Date : " + date + " - " + horaire;
+        }
 
     public int getId(){
         return this.id;
     }
-}
+
+    }
