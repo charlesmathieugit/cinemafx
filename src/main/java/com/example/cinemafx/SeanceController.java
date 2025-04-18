@@ -51,27 +51,7 @@ public class SeanceController {
         loadSeances();
     }
 
-    @FXML
-    public void add_seance(ActionEvent event) {
-        String film = this.film.getText();
-        String places = this.places.getText();
-        String salle = this.salle.getText();
-        String date = this.date.getText();
-        String horaires = this.horaire.getText();
 
-        if (film.isEmpty() || places.isEmpty() || salle.isEmpty()) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Erreur");
-            alert.setHeaderText(null);
-            alert.setContentText("Veuillez remplir tous les champs avec des informations valides");
-            alert.showAndWait();
-        } else {
-            SeanceManager cm = new SeanceManager();
-            cm.addSeance(film, places, salle, date, horaires);
-            this.loadSeances();
-        }
-
-    }
     public void loadSeances() {
         this.items2.clear();
 
@@ -82,11 +62,12 @@ public class SeanceController {
 
             while (rs.next()) {
                 String film = rs.getString("film");
+                String client = rs.getString("client");
                 int id = rs.getInt("id");
                 String salle = rs.getString("salle");
                 String places = rs.getString("places");
 
-                Seance seance = new Seance(id, film, places,salle);
+                Seance seance = new Seance(id, client, film, places,salle);
                 this.items2.add(seance);
             }
         } catch (SQLException e) {

@@ -48,6 +48,9 @@ public class CinemaController {
     private TextField places;
 
     @FXML
+    private ChoiceBox<Client> clientComboBox;
+
+    @FXML
     private ChoiceBox<Salle> salleComboBox;
 
     @FXML
@@ -79,6 +82,7 @@ public class CinemaController {
     public void initialize(){
         //lier items à la listeView au démarrage
         clients_List.setItems(items);
+        clientComboBox.setItems(items);
         seances_list.setItems(items2);
         salles_list.setItems(items3);
         salleComboBox.setItems(items3);
@@ -155,20 +159,47 @@ public class CinemaController {
     }
     @FXML
     public void delete_seance(ActionEvent event) {
-        Seance seance = (Seance) seances_list.getSelectionModel().getSelectedItem();
-        if (seance != null) {
-            System.out.println(seance.getId());
-            SeanceManager cm = new SeanceManager();
-            cm.deleteSeance(seance.getId());
-            this.loadSeances();
-        }
+        Seance seance = seances_list.getSelectionModel().getSelectedItem();
 
+        if (seance != null) {
+            try {
+                System.out.println("Suppression de la séance : " + seance.getId());
+
+                // Récupérer l'ID de la salle (attention, dans ton modèle Seance c’est peut-être stocké en String)
+                int salleId = Integer.parseInt(seance.getSalle()); // ou adapter selon ton modèle
+                int placesASupprimer = Integer.parseInt(seance.getPlaces());
+
+                SalleManager salleManager = new SalleManager();
+                int placesActuelles = salleManager.getNbPlaces(salleId);
+                int nouvellesPlaces = placesActuelles + placesASupprimer;
+
+                // Mise à jour de la salle avec les nouvelles places
+                salleManager.updateNbPlacesSalle(salleId, nouvellesPlaces);
+                System.out.println("Remis " + placesASupprimer + " places à la salle " + salleId + " → Total : " + nouvellesPlaces);
+
+                // Suppression de la séance
+                SeanceManager cm = new SeanceManager();
+                cm.deleteSeance(seance.getId());
+
+                this.loadSeances();
+                this.loadSalle(); // rafraîchir les places visibles
+
+            } catch (Exception e) {
+                e.printStackTrace();
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Erreur");
+                alert.setHeaderText(null);
+                alert.setContentText("Impossible de supprimer la séance correctement.");
+                alert.showAndWait();
+            }
+        }
     }
 
 
     @FXML
     public void add_seance(ActionEvent event) {
         String film = this.film.getText();
+        Client client = clientComboBox.getValue();
         String placesStr = this.places.getText();  // Nombre de places demandées
         Salle salle = salleComboBox.getValue();
         String dateString = this.date.getText(); // exemple : "12/05/2024"
@@ -209,7 +240,7 @@ public class CinemaController {
 
             // Ajouter la séance
             SeanceManager cm = new SeanceManager();
-            cm.addSeance(film, placesStr, String.valueOf(salle.getId()), horaires, formattedDate);
+            cm.addSeance(film, String.valueOf(client.getId()), placesStr, String.valueOf(salle.getId()), horaires, formattedDate);
 
             // Mettre à jour les places restantes dans la salle
             int nouvellesPlaces = placesRestantes - placesDemandées;
@@ -225,6 +256,7 @@ public class CinemaController {
             // Recharger les listes pour afficher les nouvelles données
             this.loadSeances();
             this.loadSalle();
+            this.loadClients();
 
         } catch (NumberFormatException e) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -253,10 +285,11 @@ public class CinemaController {
             while (rs.next()) {
                 String film = rs.getString("film");
                 int id = rs.getInt("id");
+                String client = rs.getString("client");
                 String salle = rs.getString("salle");
                 String places = rs.getString("places");
 
-                Seance seance = new Seance(id, film, places,salle);
+                Seance seance = new Seance(id, film, client, places,salle);
                 this.items2.add(seance);
             }
         } catch (SQLException e) {

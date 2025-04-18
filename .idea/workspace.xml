@@ -5,8 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b4713a3-be16-4993-a7b9-c2b8bec7a02e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bdd/SeanceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bdd/SeanceManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bdd/cinemafx.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bdd/cinemafx.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinemafx/Cinema.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinemafx/Cinema.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinemafx/CinemaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinemafx/CinemaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinemafx/SeanceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinemafx/SeanceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Seance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Seance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/cinemafx/myview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/cinemafx/myview.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bdd/SeanceManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bdd/SeanceManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cinemafx/CinemaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cinemafx/CinemaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cinemafx/SeanceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cinemafx/SeanceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cinemafx/myview.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cinemafx/myview.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/Seance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/Seance.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +52,8 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/laragon/www&quot;
   }
 }</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

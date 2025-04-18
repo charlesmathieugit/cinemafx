@@ -12,7 +12,7 @@ public class Cinema extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Cinema.class.getResource("myview.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 900, 600);
-        stage.setTitle("Logiciel de facturation");
+        stage.setTitle("Gestion d'un cinéma");
         stage.setScene(scene);
         stage.show();
     }
