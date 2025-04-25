@@ -289,7 +289,7 @@ public class CinemaController {
                 String salle = rs.getString("salle");
                 String places = rs.getString("places");
 
-                Seance seance = new Seance(id, film, client, places,salle);
+                Seance seance = new Seance(id, film, client, salle, places);
                 this.items2.add(seance);
             }
         } catch (SQLException e) {
