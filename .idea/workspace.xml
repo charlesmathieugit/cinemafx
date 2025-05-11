@@ -4,20 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b4713a3-be16-4993-a7b9-c2b8bec7a02e" name="Changes" comment="">
+    <list default="true" id="0b4713a3-be16-4993-a7b9-c2b8bec7a02e" name="Changes" comment="suppression des fichiers controlleurs inutiles">
+      <change afterPath="$PROJECT_DIR$/src/test/java/bdd/BDDManagerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/bdd/ClientManagerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/cinemafx/CinemaControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/models/ClientTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/models/SeanceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinemafx/CinemaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cinemafx/CinemaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinemafx/ClientController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cinemafx/SeanceController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/bdd/BDDManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bdd/BDDManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/bdd/ClientManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bdd/ClientManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/bdd/SalleManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bdd/SalleManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/bdd/SeanceManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bdd/SeanceManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cinemafx/Cinema.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cinemafx/Cinema.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cinemafx/CinemaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cinemafx/CinemaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cinemafx/ClientController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cinemafx/SeanceController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/models/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/Client.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/models/Salle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/Salle.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/models/Seance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/Seance.class" afterDir="false" />
@@ -27,6 +24,13 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -50,15 +54,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/laragon/www&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/laragon/www"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
